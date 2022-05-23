@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage.Content>
+    <StackLayout>
+        <Entry x:Name="nimetusEntry" Text="{Binding Path=Nimetus}"/>
+        <Entry x:Name="pealinnEntry" Text="{Binding Path=Pealinn}"/>
+        <StackLayout Orientation="Horizontal">
+            <Stepper x:Name="arv_stepper" Minimum="0" Maximum="100000" Increment="100" Value="{Binding Path=Inimeste_arv}"/>
+            <Label x:Name="arvlb1" FontSize="Large" Text="{Binding Source={x:Reference Name=arv}, Path=Value}"/>
+
+            <Button Text="Salvesta failisse" Clicked="Salvesta_failisse"/>
+            <Button Text="Loe failist" Clicked="Loe_failist"/>
+            <Button Text="Kustuta faili" Clicked="Kustuta_faili"/>
+            <Label x:Name="lbl"/>
+        </StackLayout>
+        <Button Text="Salvesta" Clicked="Button_Clicked"/>
+    </StackLayout>
+</ContentPage.Content>
